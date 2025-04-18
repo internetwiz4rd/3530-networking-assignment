@@ -1,6 +1,7 @@
 use std::{env, time::Duration, thread};
 
 fn main() -> std::io:: Result<()> {
+    println!("sjs0468 - Stell Shuman-Thomas");
     let args: Vec<String> = env::args().collect();
 
     let dest_addr_ip = args[1].clone();

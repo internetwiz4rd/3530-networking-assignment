@@ -4,6 +4,7 @@ use rand::Rng;
 use std::env;
 
 fn main() {
+    println!("sjs0468 - Stell Shuman-Thomas");
     let args: Vec<String> = env::args().collect();
 
     let addr_ip = args[1].clone();
