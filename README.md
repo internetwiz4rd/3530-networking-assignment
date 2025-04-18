@@ -8,7 +8,7 @@ I tried simplifying the guide by just using the rust compiler `rustc`, but I was
 cargo -V
 ```
 
-    you should see a version number.
+you should see a version number.
 
 2. If it isn't installed, install it. On Linux, run
 
@@ -22,7 +22,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 git clone git@github.com:internetwiz4rd/3530-networking-assignment.git
 ```
 
-    then `cd` into the folder
+then `cd` into the folder
 
 4. To build the binaries, run
 
@@ -38,7 +38,7 @@ cargo build -r --bins
 ./target/release/server <hostname> <port number>
 ```
 
-    try using "localhost" and "12345" for the args.
+try using "localhost" and "12345" for the args.
 
 7. On another, run the client using
 
@@ -46,6 +46,6 @@ cargo build -r --bins
 ./target/release/client <hostname> <port number>
 ```
 
-    make sure the arguments match between calls.
+make sure the arguments match between calls.
 
 8. Both programs should now be communicating with each other.
