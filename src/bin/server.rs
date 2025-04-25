@@ -1,17 +1,16 @@
-extern crate rand;
-
 use rand::Rng;
-use std::env;
+use std::{env, net};
 
 fn main() {
     println!("sjs0468 - Stell Shuman-Thomas");
+
     let args: Vec<String> = env::args().collect();
 
     let addr_ip = args[1].clone();
     let addr_port: u16 = args[2].trim().parse().expect("not a valid port number");
 
     let addr = (addr_ip, addr_port);
-    let socket = std::net::UdpSocket::bind(addr).expect("couldn't bind to address");
+    let socket = net::UdpSocket::bind(addr).expect("couldn't bind to address");
 
     let mut rng = rand::rng();
     let pong = "PONG".as_bytes();

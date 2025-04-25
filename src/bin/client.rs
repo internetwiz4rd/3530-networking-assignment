@@ -1,7 +1,8 @@
-use std::{env, time::Duration, thread};
+use std::{env, net, time::Duration, thread};
 
 fn main() -> std::io:: Result<()> {
     println!("sjs0468 - Stell Shuman-Thomas");
+
     let args: Vec<String> = env::args().collect();
 
     let dest_addr_ip = args[1].clone();
@@ -9,10 +10,9 @@ fn main() -> std::io:: Result<()> {
 
     let src_addr = ("127.0.0.1", 12345);
     let dest_addr = (dest_addr_ip, dest_addr_port);
-    let socket = std::net::UdpSocket::bind(src_addr).expect("couldn't bind to address");
+    let socket = net::UdpSocket::bind(src_addr).expect("couldn't bind to address");
 
     socket.set_read_timeout(Some(Duration::new(5, 0)))?;
-
 
     let ping = "PING".as_bytes();
 
